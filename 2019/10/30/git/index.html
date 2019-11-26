@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git全解读 | 阿海blog</title>
+    <meta name="description" content="博客日志">
+    
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.efd142df.css" as="style"><link rel="preload" href="/myblog/assets/js/app.cf86b132.js" as="script"><link rel="preload" href="/myblog/assets/js/3.02a0c52b.js" as="script"><link rel="preload" href="/myblog/assets/js/5.b253e24d.js" as="script"><link rel="preload" href="/myblog/assets/js/49.e2586f45.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.ab463270.js"><link rel="prefetch" href="/myblog/assets/js/11.98394e95.js"><link rel="prefetch" href="/myblog/assets/js/12.0cedc2d4.js"><link rel="prefetch" href="/myblog/assets/js/13.b3171814.js"><link rel="prefetch" href="/myblog/assets/js/14.4fc0975f.js"><link rel="prefetch" href="/myblog/assets/js/15.9e838aa3.js"><link rel="prefetch" href="/myblog/assets/js/16.a3e98fdb.js"><link rel="prefetch" href="/myblog/assets/js/17.58e49973.js"><link rel="prefetch" href="/myblog/assets/js/18.55c963ed.js"><link rel="prefetch" href="/myblog/assets/js/19.e0748b9a.js"><link rel="prefetch" href="/myblog/assets/js/20.2e201121.js"><link rel="prefetch" href="/myblog/assets/js/21.dd7f3965.js"><link rel="prefetch" href="/myblog/assets/js/22.550ae3a4.js"><link rel="prefetch" href="/myblog/assets/js/23.0304d1fa.js"><link rel="prefetch" href="/myblog/assets/js/24.d772f9d4.js"><link rel="prefetch" href="/myblog/assets/js/25.aeb549d9.js"><link rel="prefetch" href="/myblog/assets/js/26.9518bd84.js"><link rel="prefetch" href="/myblog/assets/js/27.5c6bb228.js"><link rel="prefetch" href="/myblog/assets/js/28.483a6167.js"><link rel="prefetch" href="/myblog/assets/js/29.b53658b9.js"><link rel="prefetch" href="/myblog/assets/js/30.cb07eae1.js"><link rel="prefetch" href="/myblog/assets/js/31.738d8c28.js"><link rel="prefetch" href="/myblog/assets/js/32.c3fe5ae4.js"><link rel="prefetch" href="/myblog/assets/js/33.5ddd149a.js"><link rel="prefetch" href="/myblog/assets/js/34.85a7f6e4.js"><link rel="prefetch" href="/myblog/assets/js/35.f775e353.js"><link rel="prefetch" href="/myblog/assets/js/36.d811fd43.js"><link rel="prefetch" href="/myblog/assets/js/37.44048c34.js"><link rel="prefetch" href="/myblog/assets/js/38.c27302f4.js"><link rel="prefetch" href="/myblog/assets/js/39.ee40026a.js"><link rel="prefetch" href="/myblog/assets/js/4.d89400b6.js"><link rel="prefetch" href="/myblog/assets/js/40.6daca118.js"><link rel="prefetch" href="/myblog/assets/js/41.a768339f.js"><link rel="prefetch" href="/myblog/assets/js/42.bb599b1a.js"><link rel="prefetch" href="/myblog/assets/js/43.45dac5e6.js"><link rel="prefetch" href="/myblog/assets/js/44.be9e1fd5.js"><link rel="prefetch" href="/myblog/assets/js/45.69464a5b.js"><link rel="prefetch" href="/myblog/assets/js/46.4c6a2a65.js"><link rel="prefetch" href="/myblog/assets/js/47.acaae1eb.js"><link rel="prefetch" href="/myblog/assets/js/48.04fdd823.js"><link rel="prefetch" href="/myblog/assets/js/50.1386c3af.js"><link rel="prefetch" href="/myblog/assets/js/51.27480573.js"><link rel="prefetch" href="/myblog/assets/js/52.af125c64.js"><link rel="prefetch" href="/myblog/assets/js/53.54f8e36f.js"><link rel="prefetch" href="/myblog/assets/js/54.7ddf154f.js"><link rel="prefetch" href="/myblog/assets/js/55.712ebb58.js"><link rel="prefetch" href="/myblog/assets/js/56.5c8902a6.js"><link rel="prefetch" href="/myblog/assets/js/57.794b2964.js"><link rel="prefetch" href="/myblog/assets/js/58.aaef7782.js"><link rel="prefetch" href="/myblog/assets/js/59.aadc710c.js"><link rel="prefetch" href="/myblog/assets/js/6.00468cf7.js"><link rel="prefetch" href="/myblog/assets/js/60.58311edb.js"><link rel="prefetch" href="/myblog/assets/js/61.e734d238.js"><link rel="prefetch" href="/myblog/assets/js/62.95ce8054.js"><link rel="prefetch" href="/myblog/assets/js/63.b9926306.js"><link rel="prefetch" href="/myblog/assets/js/64.1bee1444.js"><link rel="prefetch" href="/myblog/assets/js/65.4ceca4a2.js"><link rel="prefetch" href="/myblog/assets/js/66.c3f05729.js"><link rel="prefetch" href="/myblog/assets/js/67.6b39435c.js"><link rel="prefetch" href="/myblog/assets/js/68.73e9dd74.js"><link rel="prefetch" href="/myblog/assets/js/7.35d7f06d.js"><link rel="prefetch" href="/myblog/assets/js/8.90ceae7a.js"><link rel="prefetch" href="/myblog/assets/js/9.6519f079.js"><link rel="prefetch" href="/myblog/assets/js/vuejs-paginate.b4ae6543.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.efd142df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuperess-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/myblog/myblog/" class="nav-link home-link">阿海blog
+        </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/myblog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/myblog/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/myblog/myblog/" class="nav-link mobile-home-link">阿海blog
+      </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/myblog/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/myblog/tag/" class="nav-link">Tags</a></li></ul></div></div></div></section> <div class="content-wrapper"><div id="vuperess-theme-blog__post-layout"><div class="vuepress-blog-theme-content content__default"><h1 id="git全解读"><a href="#git全解读" aria-hidden="true" class="header-anchor">#</a> git全解读</h1> <p><strong>版本库又名仓库</strong> ，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</p> <h2 id="创建并提交一个版本库"><a href="#创建并提交一个版本库" aria-hidden="true" class="header-anchor">#</a> 创建并提交一个版本库</h2> <blockquote><p>课外知识: mkdir 创建目录; pwd 显示绝对路径; cat 文件名 查看文件内容
+注：所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p> <blockquote><p>Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的，如果要真要使用版本控制系统，就要以纯文本方式编写文件。
+千万不要使用Windows自带的记事本编辑任何文本文件,原因是Microsoft开发记事本的团队,在每个文件开头添加了0xefbbbf（十六进制）的字符，你会遇到很多不可思议的问题.</p></blockquote></blockquote> <h3 id="_1-核心操作"><a href="#_1-核心操作" aria-hidden="true" class="header-anchor">#</a> 1 核心操作</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 1.初始化仓库,.git目录默认隐藏,可以通过命令ls -ah显示</span>
+    git init
+
+<span class="token code keyword">    # 2.把文件添加到版本库，可以一次添加多个文件，git add . 代表把所有文件全部提交
+    git add 文件名 文件名</span>
+
+<span class="token code keyword">    # 3.把文件提交到当前分支
+    git commit -m '本次提交的说明'</span>
+
+<span class="token code keyword">    # 4.把项目提交到(远程)仓储
+    git push</span>
+</code></pre></div><h3 id="_2-分支管理"><a href="#_2-分支管理" aria-hidden="true" class="header-anchor">#</a> 2.分支管理</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 1.查看远程分支</span>
+    git branch -a
+
+<span class="token code keyword">    # 2.查看本地分支
+    git branch</span>
+
+<span class="token code keyword">    # 3.创建并切换分支 （加-b表示创建并切换）
+    git checkout -b 分支名</span>
+
+<span class="token code keyword">    # 4.切换回分支
+    git checkout 分支名</span>
+
+<span class="token code keyword">    # 5.从主分支里创建新分支
+    git checkout master -b 新分支名</span>
+
+<span class="token code keyword">    # 6.合并某分支到当前分支
+    git merge 分支名</span>
+
+<span class="token code keyword">    # 7.删除分支
+    git branch -d 分支名
+    git branch -D 分支名 (强行删除分支)</span>
+</code></pre></div><h3 id="_3-解决冲突"><a href="#_3-解决冲突" aria-hidden="true" class="header-anchor">#</a> 3.解决冲突</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 情景一 提交或拉取时冲突</span>
+    git stash
+    git pull
+    git stash pop
+
+<span class="token code keyword">    # 情景二 如果你想完全地覆盖本地的代码，只保留服务器端代码，则直接回退到上一个版本，再进行pull
+    git reset --hard HEAD^
+    git pull origin master
+    # 注：origin master表示git的主分支</span>
+
+<span class="token code keyword">    # 情景三 分支合并时冲突(当我们git merge 分支名 时)
+    1.git status (查看发生冲突的文)
+    2.然后手动合并冲突
+    3.git add .  (添加更改后的文件)
+    4.git commit -m 'xj' (提交)</span>
+</code></pre></div><h3 id="_4-查看ssh密钥"><a href="#_4-查看ssh密钥" aria-hidden="true" class="header-anchor">#</a> 4.查看ssh密钥</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 1.进入.ssh目录</span>
+    cd ~/.ssh
+    <span class="token title important"><span class="token punctuation">#</span> 2.查看id_rsa.pub文件</span>
+    cat id_rsa.pub
+</code></pre></div><h3 id="_5-克隆远程项目"><a href="#_5-克隆远程项目" aria-hidden="true" class="header-anchor">#</a> 5.克隆远程项目</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    git clone 远程源地址
+</code></pre></div><h3 id="_6-回退某个操作"><a href="#_6-回退某个操作" aria-hidden="true" class="header-anchor">#</a> 6.回退某个操作</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 1.查看命令历史</span>
+    git reflog
+    <span class="token title important"><span class="token punctuation">#</span> 2.根据commitID撤销某个操作</span>
+    git reset --hard 某个commitId
+</code></pre></div><h3 id="_7-和远程分支建立关联"><a href="#_7-和远程分支建立关联" aria-hidden="true" class="header-anchor">#</a> 7.和远程分支建立关联</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    git branch --set-upstream-to=origin/远程分支的名字 本地分支名
+</code></pre></div><h3 id="_8-删除文件"><a href="#_8-删除文件" aria-hidden="true" class="header-anchor">#</a> 8.删除文件</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 删除版本库中的文件</span>
+    git rm filename
+    <span class="token title important"><span class="token punctuation">#</span> 恢复工作区中误删的文件</span>
+    git checkout -- filename
+    <span class="token title important"><span class="token punctuation">#</span> 注：git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</span>
+</code></pre></div><h3 id="_9-远程仓储"><a href="#_9-远程仓储" aria-hidden="true" class="header-anchor">#</a> 9.远程仓储</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 1.创建sshkey密钥</span>
+    ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+    <span class="token title important"><span class="token punctuation">#</span> 2.在远程仓库中添加ssh公钥</span>
+    <span class="token title important"><span class="token punctuation">#</span> 3.关联远程库</span>
+    git remote add origin git@server-name:path/repo-name.git
+    <span class="token title important"><span class="token punctuation">#</span> 4.第一次推送master分支的所有内容,此后只需要使用git push origin master即可推送最新修改</span>
+    git push -u origin master
+</code></pre></div><h3 id="_10-多人协作"><a href="#_10-多人协作" aria-hidden="true" class="header-anchor">#</a> 10.多人协作</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> 1.查看远程仓储的详细信息</span>
+    git remote -v
+    <span class="token title important"><span class="token punctuation">#</span> 2.推送本地分支到远程仓库,</span>
+    <span class="token title important"><span class="token punctuation">#</span>1.如果发生冲突，用git pull试图合并，如果发生冲突则解决冲突，再进行推送</span>
+    <span class="token title important"><span class="token punctuation">#</span>2.如果git pull后提示no tracking information(没有追踪信息)，则进行第四项，建立关联，之后pull，有冲突再合并</span>
+    git push origin 本地分支名
+    <span class="token title important"><span class="token punctuation">#</span> 3.在本地创建和远程分支对应的分支</span>
+    git checkout -b 本地分支 origin/远程分支名
+    <span class="token title important"><span class="token punctuation">#</span> 4.建立本地分支和远程分支的关联</span>
+    git branch --set-upstream 本地分支名 origin/远程分支名
+</code></pre></div><h3 id="_11-分支策略"><a href="#_11-分支策略" aria-hidden="true" class="header-anchor">#</a> 11.分支策略</h3> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    1.master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
+    2.干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；
+    3.每个人都有自己的分支，时不时地往dev分支上合并就可以了
+</code></pre></div><blockquote><p>补充</p></blockquote> <div class="language-markdown extra-class"><pre class="language-markdown"><code>    <span class="token title important"><span class="token punctuation">#</span> git fetch和git pull的区别</span>
+    与git pull相比git fetch相当于是从远程获取最新版本到本地，但不会自动merge。如果需要有选择的合并git fetch是更好的选择。效果相同时git pull将更为快捷。
+
+<span class="token code keyword">    # 查看仓库当前的状态
+    git status</span>
+
+<span class="token code keyword">    // 查看提交日志
+    git log</span>
+
+<span class="token code keyword">    # 回退版本,在git中用HEAD表示当前版本,HEAD^表示上一个版本,HEAD^^表示上上个版本
+    git reset --hard HEAD^ 或
+    git reset --hard 3628164 (数字代表log里commit后面的id,只需要填前几位就可以)</span>
+
+<span class="token code keyword">    # 窗口关闭后回退版本(git reflog用来记录你的每一次命令)
+    git reflog</span>
+
+<span class="token code keyword">    # 工作区和暂存区
+    工作区就是你建立的能看见的目录,.git即为git的版本库,Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+    用git add把文件添加进去，实际上就是把文件修改添加到暂存区；
+    用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支</span>
+
+<span class="token code keyword">    # 撤销修改
+    1.直接丢弃工作区的修改，用命令git checkout -- file
+    ````</span></code></pre></div></div> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#创建并提交一个版本库" title="创建并提交一个版本库">创建并提交一个版本库</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_1-核心操作" title="1 核心操作">1 核心操作</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_2-分支管理" title="2.分支管理">2.分支管理</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_3-解决冲突" title="3.解决冲突">3.解决冲突</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_4-查看ssh密钥" title="4.查看ssh密钥">4.查看ssh密钥</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_5-克隆远程项目" title="5.克隆远程项目">5.克隆远程项目</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_6-回退某个操作" title="6.回退某个操作">6.回退某个操作</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_7-和远程分支建立关联" title="7.和远程分支建立关联">7.和远程分支建立关联</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_8-删除文件" title="8.删除文件">8.删除文件</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_9-远程仓储" title="9.远程仓储">9.远程仓储</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_10-多人协作" title="10.多人协作">10.多人协作</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_11-分支策略" title="11.分支策略">11.分支策略</a></div></div></div></div> <footer class="footer" data-v-0d113134><div class="footer-left-wrap" data-v-0d113134><ul class="contact" data-v-0d113134><li class="contact-item" data-v-0d113134><a href="https://github.com/ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-0d113134><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-0d113134></path></svg>
+          
+        </a></li><li class="contact-item" data-v-0d113134><a href="https://twitter.com/_ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" data-v-0d113134><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" data-v-0d113134></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-0d113134><ul class="copyright" data-v-0d113134><li class="copyright-item" data-v-0d113134><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134>Privacy Policy</a></li><li class="copyright-item" data-v-0d113134><a href="/myblog/2019/10/30/git/.html" class="nav-link" data-v-0d113134>MIT Licensed | Copyright © 2018-present Vue.js</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/myblog/assets/js/app.cf86b132.js" defer></script><script src="/myblog/assets/js/3.02a0c52b.js" defer></script><script src="/myblog/assets/js/5.b253e24d.js" defer></script><script src="/myblog/assets/js/49.e2586f45.js" defer></script>
+  </body>
+</html>

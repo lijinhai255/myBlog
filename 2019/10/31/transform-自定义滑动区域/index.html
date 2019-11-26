@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2D和3D | 阿海blog</title>
+    <meta name="description" content="博客日志">
+    
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.efd142df.css" as="style"><link rel="preload" href="/myblog/assets/js/app.cf86b132.js" as="script"><link rel="preload" href="/myblog/assets/js/3.02a0c52b.js" as="script"><link rel="preload" href="/myblog/assets/js/5.b253e24d.js" as="script"><link rel="preload" href="/myblog/assets/js/16.a3e98fdb.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.ab463270.js"><link rel="prefetch" href="/myblog/assets/js/11.98394e95.js"><link rel="prefetch" href="/myblog/assets/js/12.0cedc2d4.js"><link rel="prefetch" href="/myblog/assets/js/13.b3171814.js"><link rel="prefetch" href="/myblog/assets/js/14.4fc0975f.js"><link rel="prefetch" href="/myblog/assets/js/15.9e838aa3.js"><link rel="prefetch" href="/myblog/assets/js/17.58e49973.js"><link rel="prefetch" href="/myblog/assets/js/18.55c963ed.js"><link rel="prefetch" href="/myblog/assets/js/19.e0748b9a.js"><link rel="prefetch" href="/myblog/assets/js/20.2e201121.js"><link rel="prefetch" href="/myblog/assets/js/21.dd7f3965.js"><link rel="prefetch" href="/myblog/assets/js/22.550ae3a4.js"><link rel="prefetch" href="/myblog/assets/js/23.0304d1fa.js"><link rel="prefetch" href="/myblog/assets/js/24.d772f9d4.js"><link rel="prefetch" href="/myblog/assets/js/25.aeb549d9.js"><link rel="prefetch" href="/myblog/assets/js/26.9518bd84.js"><link rel="prefetch" href="/myblog/assets/js/27.5c6bb228.js"><link rel="prefetch" href="/myblog/assets/js/28.483a6167.js"><link rel="prefetch" href="/myblog/assets/js/29.b53658b9.js"><link rel="prefetch" href="/myblog/assets/js/30.cb07eae1.js"><link rel="prefetch" href="/myblog/assets/js/31.738d8c28.js"><link rel="prefetch" href="/myblog/assets/js/32.c3fe5ae4.js"><link rel="prefetch" href="/myblog/assets/js/33.5ddd149a.js"><link rel="prefetch" href="/myblog/assets/js/34.85a7f6e4.js"><link rel="prefetch" href="/myblog/assets/js/35.f775e353.js"><link rel="prefetch" href="/myblog/assets/js/36.d811fd43.js"><link rel="prefetch" href="/myblog/assets/js/37.44048c34.js"><link rel="prefetch" href="/myblog/assets/js/38.c27302f4.js"><link rel="prefetch" href="/myblog/assets/js/39.ee40026a.js"><link rel="prefetch" href="/myblog/assets/js/4.d89400b6.js"><link rel="prefetch" href="/myblog/assets/js/40.6daca118.js"><link rel="prefetch" href="/myblog/assets/js/41.a768339f.js"><link rel="prefetch" href="/myblog/assets/js/42.bb599b1a.js"><link rel="prefetch" href="/myblog/assets/js/43.45dac5e6.js"><link rel="prefetch" href="/myblog/assets/js/44.be9e1fd5.js"><link rel="prefetch" href="/myblog/assets/js/45.69464a5b.js"><link rel="prefetch" href="/myblog/assets/js/46.4c6a2a65.js"><link rel="prefetch" href="/myblog/assets/js/47.acaae1eb.js"><link rel="prefetch" href="/myblog/assets/js/48.04fdd823.js"><link rel="prefetch" href="/myblog/assets/js/49.e2586f45.js"><link rel="prefetch" href="/myblog/assets/js/50.1386c3af.js"><link rel="prefetch" href="/myblog/assets/js/51.27480573.js"><link rel="prefetch" href="/myblog/assets/js/52.af125c64.js"><link rel="prefetch" href="/myblog/assets/js/53.54f8e36f.js"><link rel="prefetch" href="/myblog/assets/js/54.7ddf154f.js"><link rel="prefetch" href="/myblog/assets/js/55.712ebb58.js"><link rel="prefetch" href="/myblog/assets/js/56.5c8902a6.js"><link rel="prefetch" href="/myblog/assets/js/57.794b2964.js"><link rel="prefetch" href="/myblog/assets/js/58.aaef7782.js"><link rel="prefetch" href="/myblog/assets/js/59.aadc710c.js"><link rel="prefetch" href="/myblog/assets/js/6.00468cf7.js"><link rel="prefetch" href="/myblog/assets/js/60.58311edb.js"><link rel="prefetch" href="/myblog/assets/js/61.e734d238.js"><link rel="prefetch" href="/myblog/assets/js/62.95ce8054.js"><link rel="prefetch" href="/myblog/assets/js/63.b9926306.js"><link rel="prefetch" href="/myblog/assets/js/64.1bee1444.js"><link rel="prefetch" href="/myblog/assets/js/65.4ceca4a2.js"><link rel="prefetch" href="/myblog/assets/js/66.c3f05729.js"><link rel="prefetch" href="/myblog/assets/js/67.6b39435c.js"><link rel="prefetch" href="/myblog/assets/js/68.73e9dd74.js"><link rel="prefetch" href="/myblog/assets/js/7.35d7f06d.js"><link rel="prefetch" href="/myblog/assets/js/8.90ceae7a.js"><link rel="prefetch" href="/myblog/assets/js/9.6519f079.js"><link rel="prefetch" href="/myblog/assets/js/vuejs-paginate.b4ae6543.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.efd142df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuperess-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/myblog/myblog/" class="nav-link home-link">阿海blog
+        </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/myblog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/myblog/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/myblog/myblog/" class="nav-link mobile-home-link">阿海blog
+      </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/myblog/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/myblog/tag/" class="nav-link">Tags</a></li></ul></div></div></div></section> <div class="content-wrapper"><div id="vuperess-theme-blog__post-layout"><div class="vuepress-blog-theme-content content__default"><h1 id="_2d和3d"><a href="#_2d和3d" aria-hidden="true" class="header-anchor">#</a> 2D和3D</h1> <h2 id="_2d"><a href="#_2d" aria-hidden="true" class="header-anchor">#</a> 2D</h2> <div class="language-css extra-class"><pre class="language-css"><code>	<span class="token selector">*</span> <span class="token punctuation">{</span>
+			<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+			<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">#box</span> <span class="token punctuation">{</span>
+			<span class="token property">width</span><span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+			<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+			<span class="token property">border</span><span class="token punctuation">:</span> 1px solid red<span class="token punctuation">;</span>
+			<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">img</span> <span class="token punctuation">{</span>
+			<span class="token comment">/* 2d中: 平移  旋转 缩放 斜切 */</span>
+			<span class="token comment">/*2d中的平移: x 表示正方向向右   y 正方向向下*/</span>
+			<span class="token comment">/*transform: translate(20px);*/</span>
+			<span class="token comment">/*transform: translateX(20px) translateY(20px);*/</span>
+			
+			<span class="token comment">/*2d中的旋转: 接收一个带有单位的参数， 表示沿着顺时针旋转了多少角度*/</span>
+			<span class="token comment">/*transform: rotate(45deg);*/</span>
+			<span class="token comment">/*transform: rotateX(45deg) rotateY(45deg);*/</span>
+			
+			<span class="token comment">/*2d中的缩放: 当接收一个参数的时候， 表示元素的宽度和高度变为原来的多少倍*/</span>
+			<span class="token comment">/*当接收2个参数的时候，第一个参数表示原来宽度的多少倍， 第二个参数表示元素高度的多少倍*/</span>
+			<span class="token comment">/*transform: scale(2);*/</span>
+			<span class="token comment">/*transform: scale(1, .5);*/</span>
+
+			<span class="token comment">/*transform: skew(45deg);*/</span>
+			<span class="token comment">/*transform: skew(20deg, 20deg);*/</span>
+
+		<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javaScript extra-class"><pre class="language-javascript"><code>    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">&quot;images/0.jpg&quot;</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="_3d"><a href="#_3d" aria-hidden="true" class="header-anchor">#</a> 3D</h2> <pre><code>2d是平面
+2d的坐标系： x + y
+x表示正方向向右， y表示正方向向下
+
+3d是立体
+3d的坐标系: x + y + z
+x表示正方向向右, y表示正方向向下, z垂直于屏幕
+</code></pre> <h2 id="translatez"><a href="#translatez" aria-hidden="true" class="header-anchor">#</a> translateZ</h2> <pre><code>该属性是tansform的一个子属性，表示元素沿着自身Z轴移动了多少像素
+只有该条代码，元素将不会发生任何改变
+必须要给父元素添加perspective： xxpx
+表示父元素距离屏幕的多少像素
+</code></pre> <div class="language-css extra-class"><pre class="language-css"><code>    <span class="token selector">*</span> <span class="token punctuation">{</span>
+			<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+			<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">#box</span> <span class="token punctuation">{</span>
+			<span class="token property">width</span><span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+			<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+			<span class="token property">border</span><span class="token punctuation">:</span> 1px solid red<span class="token punctuation">;</span>
+			<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+			<span class="token comment">/*确定舞台的距离*/</span>
+			<span class="token property">perspective</span><span class="token punctuation">:</span> 101px<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">img</span> <span class="token punctuation">{</span>
+			<span class="token comment">/*演员移动的距离*/</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+</code></pre></div><h2 id="perspective景深"><a href="#perspective景深" aria-hidden="true" class="header-anchor">#</a> perspective景深</h2> <pre><code>景深: 表示元素到屏幕的距离
+</code></pre> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">1#box</span> <span class="token punctuation">{</span>
+2		<span class="token property">width</span><span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+3		<span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+4		<span class="token property">border</span><span class="token punctuation">:</span> 1px solid red<span class="token punctuation">;</span>
+5		<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+6		<span class="token comment">/*确定舞台的距离*/</span>
+7		<span class="token property">perspective</span><span class="token punctuation">:</span> 101px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</code></pre></div><h2 id="transform-style-preserve-3d"><a href="#transform-style-preserve-3d" aria-hidden="true" class="header-anchor">#</a> transform-style: preserve-3d</h2> <pre><code>让子元素保留3d效果
+</code></pre> <p><img src="data:image/png;base64,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" alt="preserve"></p> <pre><code>当加上transform-style: preserve-3d属性之后：
+</code></pre> <p><img src="/myblog/assets/img/54.32540f9f.png" alt="preserve"></p> <h2 id="scalez"><a href="#scalez" aria-hidden="true" class="header-anchor">#</a> scaleZ</h2> <pre><code>scale是缩放的意思， 一个元素只有宽度和高度没有厚度的概念，所以给一个元素添加scaleZ是没有意义的
+一个元素：
+</code></pre> <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALUAAACQCAIAAADBUL17AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABeUlEQVR4nO3asQ3DQAwEQb+h/lumK/BmhARhpoH7YMHoz8x84I/v3Q/g0fRB0QdFHxR9UPRB0QdFHxR9UPRB0QdFHxR9UPRB0QflWl84Z33iNZ73F8f9oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog/Ktb4wsz7BGveDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPij6oOiDog+KPig/XZ4IH2ax3pcAAAAASUVORK5CYII=" alt="scaleZ"></p> <h2 id="实现立方体"><a href="#实现立方体" aria-hidden="true" class="header-anchor">#</a> 实现立方体</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">*</span> <span class="token punctuation">{</span>
+			<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+			<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">#box</span> <span class="token punctuation">{</span>
+			<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+			<span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+			<span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+			<span class="token property">margin</span><span class="token punctuation">:</span> 150px auto<span class="token punctuation">;</span>
+			<span class="token comment">/*perspective: 10000px;*/</span>
+			<span class="token property">transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">/*调用动画*/</span>
+			<span class="token property">animation</span><span class="token punctuation">:</span> zhuan 3s linear 2s infinite<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">#box div</span> <span class="token punctuation">{</span>
+			<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+			<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+			<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+			<span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+			<span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">/*定义动画*/</span>
+		<span class="token atrule"><span class="token rule">@keyframes</span> zhuan</span> <span class="token punctuation">{</span>
+			<span class="token selector">form</span> <span class="token punctuation">{</span>
+				<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span> 
+			<span class="token selector">to</span> <span class="token punctuation">{</span>
+				<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>405deg<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>405deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">/*顶面*/</span>
+		<span class="token selector">.one</span> <span class="token punctuation">{</span>
+			<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>200px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">/*地面*/</span>
+		<span class="token selector">.two</span> <span class="token punctuation">{</span>
+			<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>-200px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">.three</span> <span class="token punctuation">{</span>
+			<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>200px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">.four</span> <span class="token punctuation">{</span>
+			<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>-200px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">.five</span> <span class="token punctuation">{</span>
+			<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>200px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token selector">.six</span> <span class="token punctuation">{</span>
+			<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>-200px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>one<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>tow<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>three<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>four<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>five<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>six<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="backface-visibility-hidden"><a href="#backface-visibility-hidden" aria-hidden="true" class="header-anchor">#</a> backface-visibility: hidden</h2> <pre><code>默认情况下图片的背面是倒影
+</code></pre> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">*</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">img</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all 1s<span class="token punctuation">;</span>
+    <span class="token property">backface-visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">img:nth-child(2)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*第一张图片天生翻转180deg*/</span>
+<span class="token selector">img:nth-child(1)</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box:hover img:nth-child(2)</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box:hover img:nth-child(1)</span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>images/0.jpg<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>images/1.jpg<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="改变旋转轴中心"><a href="#改变旋转轴中心" aria-hidden="true" class="header-anchor">#</a> 改变旋转轴中心</h2> <pre><code>transform-origin: 接收两个参数
+可以是像素法
+可以是百分比
+可以是单词法
+默认情况下是 50% 50%
+</code></pre> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">*</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid red<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 50px auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">img</span> <span class="token punctuation">{</span>
+    <span class="token comment">/*改变旋转轴中心*/</span>
+    <span class="token comment">/*改变旋转轴中心到 左上位置*/</span>
+    <span class="token comment">/*transform-origin: left top;*/</span>
+    <span class="token comment">/*transform-origin: right top;*/</span>
+    <span class="token comment">/*用像素法改变旋转轴中心 50px 50px的位置*/</span>
+    <span class="token comment">/*transform-origin: 50px 50px;*/</span>
+    <span class="token comment">/*用百分比*/</span>
+    <span class="token property">transform-origin</span><span class="token punctuation">:</span> 50% 50%<span class="token punctuation">;</span>
+    <span class="token comment">/*transform-origin: 100% 50%;*/</span>
+    <span class="token comment">/*transform-origin: 0% 100%;*/</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>images/1.jpg<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="_2d代码总结"><a href="#_2d代码总结" aria-hidden="true" class="header-anchor">#</a> 2D代码总结</h2> <div class="language-css extra-class"><pre class="language-css"><code> <span class="token selector">.box</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">*</span><span class="token punctuation">{</span><span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">.con</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">margin-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+	<span class="token property">margin-left</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.translate-scale,.translate,.scale,.skew,.rotate</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span>
+	<span class="token property">transition</span><span class="token punctuation">:</span> all 0.5s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>transform2D转换<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>旋转<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rotate<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				旋转
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>斜切<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>skew<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				斜切
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>缩放<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>scale<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				缩放
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>位移<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>translate<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				位移
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>位移+缩放<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>translate-scale<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-javaScript extra-class"><pre class="language-javascript"><code>   <span class="token comment">// 旋转 顺时针，逆时针 围绕中心点</span>
+        <span class="token keyword">var</span> rotate <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.rotate&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        rotate<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            <span class="token comment">//deg 角度</span>
+            rotate<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">&quot;rotate(-90deg)&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 斜切 X轴方向（默认x轴） Y轴 围绕中心点</span>
+        <span class="token keyword">var</span> skew <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.skew&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        skew<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            <span class="token comment">//deg 角度</span>
+            skew<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">&quot;skewY(30deg)&quot;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        
+         <span class="token comment">// 缩放 传数字 围绕中心点 X,Y</span>
+         <span class="token keyword">var</span> scale <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.scale&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         scale<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            <span class="token comment">// scale.style.transform = &quot;scale(0.5,2)&quot;;</span>
+            <span class="token comment">//旋转加缩放</span>
+            scale<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">&quot;rotate(360deg) scale(0.1)&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 位移 X Y轴 px rem</span>
+        <span class="token keyword">var</span> translate <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.translate&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        translate<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            translate<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">&quot;rotate(360deg) translate(-50px,50px) scale(0.1)&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+        <span class="token comment">//执行顺序 先写的后执行</span>
+        <span class="token keyword">var</span> translateScale <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.translate-scale&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        translateScale<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            translateScale<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">&quot;translate(30px) scale(1.5)&quot;</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_3d代码总结"><a href="#_3d代码总结" aria-hidden="true" class="header-anchor">#</a> 3D代码总结</h2> <div class="language-css extra-class"><pre class="language-css"><code> <span class="token selector">.box</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">*</span><span class="token punctuation">{</span><span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token selector">.con</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">margin-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+	<span class="token property">margin-left</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token comment">/* 景深 */</span>
+	<span class="token property">perspective</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.translate-scale,.translate,.scale,.skew,.rotate</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span>
+	<span class="token property">transition</span><span class="token punctuation">:</span> all 0.5s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>transform3D转换<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>旋转<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rotate<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				旋转
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>位移<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>translate<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				位移
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>位移+缩放<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>con<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>translate-scale<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+				
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-javaScript extra-class"><pre class="language-javascript"><code>  <span class="token comment">// 旋转 顺时针，逆时针 围绕中心点</span>
+	<span class="token keyword">var</span> rotate <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.rotate&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	rotate<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+		<span class="token comment">//deg 角度</span>
+		rotate<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">&quot;rotateZ(-60deg)&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+	<span class="token comment">// 位移 X Y轴 px rem</span>
+	<span class="token keyword">var</span> translate <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.translate&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	translate<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+		translate<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">&quot;translateZ(-100px)&quot;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token comment">// transform-style</span>
+</code></pre></div><h2 id="自定义滑动区域"><a href="#自定义滑动区域" aria-hidden="true" class="header-anchor">#</a> 自定义滑动区域</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">body</span><span class="token punctuation">{</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body,html</span><span class="token punctuation">{</span>
+<span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">header</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> greenyellow<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">#wrap</span><span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+	<span class="token property">top</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+	<span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">left</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+	<span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">#list</span><span class="token punctuation">{</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">#list li</span><span class="token punctuation">{</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #333333<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+	<span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #999999<span class="token punctuation">;</span>
+	<span class="token property">text-indent</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>
+	我是header
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>wrap<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-javaScript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">initList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">var</span> list <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;list&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> html <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                html <span class="token operator">+=</span> <span class="token string">&quot;&lt;li&gt;&quot;</span><span class="token operator">+</span><span class="token string">&quot;我是&quot;</span><span class="token operator">+</span>i<span class="token operator">+</span><span class="token string">&quot;&lt;/li&gt;&quot;</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            list<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> html<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+       
+        window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">initList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> wrap <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;wrap&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> lists <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;list&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> startY <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//Y轴</span>
+            <span class="token keyword">var</span> startEl <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    
+            <span class="token keyword">var</span> translateY <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            lists<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchstart&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+                startY <span class="token operator">=</span> e<span class="token punctuation">.</span>changedTouches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>pageY<span class="token punctuation">;</span>
+                startEl <span class="token operator">=</span> translateY<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            lists<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;touchmove&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+                <span class="token keyword">var</span> moveY <span class="token operator">=</span> e<span class="token punctuation">.</span>changedTouches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>pageY<span class="token punctuation">;</span>
+                <span class="token keyword">var</span> distance <span class="token operator">=</span> moveY <span class="token operator">-</span> startY<span class="token punctuation">;</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>distance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                translateY <span class="token operator">=</span> startEl <span class="token operator">+</span>distance<span class="token punctuation">;</span>
+                lists<span class="token punctuation">.</span>style<span class="token punctuation">.</span>webkitTransform <span class="token operator">=</span> lists<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> 
+                <span class="token string">&quot;translateY(&quot;</span><span class="token operator">+</span>translateY<span class="token operator">+</span><span class="token string">&quot;px)&quot;</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//left top =&gt; 元素回流(布局属性或者几何属性)</span>
+</code></pre></div></div> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#_2d" title="2D">2D</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_3d" title="3D">3D</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#translatez" title="translateZ">translateZ</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#perspective景深" title="perspective景深">perspective景深</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#transform-style-preserve-3d" title="transform-style: preserve-3d">transform-style: preserve-3d</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#scalez" title="scaleZ">scaleZ</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#实现立方体" title="实现立方体">实现立方体</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#backface-visibility-hidden" title="backface-visibility: hidden">backface-visibility: hidden</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#改变旋转轴中心" title="改变旋转轴中心">改变旋转轴中心</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_2d代码总结" title="2D代码总结">2D代码总结</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_3d代码总结" title="3D代码总结">3D代码总结</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#自定义滑动区域" title="自定义滑动区域">自定义滑动区域</a></div></div></div></div> <footer class="footer" data-v-0d113134><div class="footer-left-wrap" data-v-0d113134><ul class="contact" data-v-0d113134><li class="contact-item" data-v-0d113134><a href="https://github.com/ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-0d113134><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-0d113134></path></svg>
+          
+        </a></li><li class="contact-item" data-v-0d113134><a href="https://twitter.com/_ulivz" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" data-v-0d113134><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" data-v-0d113134></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-0d113134><ul class="copyright" data-v-0d113134><li class="copyright-item" data-v-0d113134><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134>Privacy Policy</a></li><li class="copyright-item" data-v-0d113134><a href="/myblog/2019/10/31/transform-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%BB%91%E5%8A%A8%E5%8C%BA%E5%9F%9F/.html" class="nav-link" data-v-0d113134>MIT Licensed | Copyright © 2018-present Vue.js</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/myblog/assets/js/app.cf86b132.js" defer></script><script src="/myblog/assets/js/3.02a0c52b.js" defer></script><script src="/myblog/assets/js/5.b253e24d.js" defer></script><script src="/myblog/assets/js/16.a3e98fdb.js" defer></script>
+  </body>
+</html>
